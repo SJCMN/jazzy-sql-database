@@ -1,0 +1,37 @@
+Jazz SQL database
+ERD entity relationship diagram
+
+[x] install dependencies
+    [x] express
+    [x] pg
+    [x] body-parser
+
+[x] set up sql db jazzy_sql
+    [x] write statements to create tables
+    [x] add seed data
+    [x] table artist
+        [x] id -- serial primary key
+        [x] name -- varchar(80)
+        [x] birthdate -- date
+    [x] table song
+        [x] id -- serial primary key
+        [x] title -- varchar(255)
+        [x] length -- varchar(10)
+        [x] released -- date
+
+[] write queries
+    [] select
+    [] sort
+    [] create
+
+[] connect to db 
+[] update routes
+    [] /artist GET
+    [] /artist POST 
+    [] /song GET
+    [] /song POST
+
+[] move pool to module
+[] add router file
+    [] /artist 
+    [] /song
