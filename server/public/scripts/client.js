@@ -68,7 +68,9 @@ function getArtists() {
         method: 'GET',
         url: '/artist'
     }).then(function(response) {
-        const listOfArtists = response;
+        console.log('get artist songs', response);
+        
+        // const listOfArtists = response;
         renderArtists(response);
     }).catch(function (error) {
         console.log('error in artist get', error);
@@ -87,12 +89,12 @@ function getSongs() {
     });
 }
 
-function renderArtists( listOfArtists ) {
+function renderArtists( response ) {
     // Empty previous data
     $('#artistTableBody').empty();
 
     // Add all artists to table
-    for(let artist of listOfArtists) {
+    for(let artist of response) {
         $('#artistTableBody').append(`
                 <tr>
                     <td>${artist.name}</td>
